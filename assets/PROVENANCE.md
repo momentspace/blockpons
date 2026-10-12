@@ -1,10 +1,14 @@
-# Blockpons asset provenance register
+# Asset provenance
 
-No game assets have been added yet. **Do not add external images, audio, fonts or code without permission and license review.**
+No third-party images, audio files, or fonts are included in the initial
+playable prototype. The board, blocks, backgrounds, and UI decorations are
+defined directly in the original Flutter source code.
 
-For every future asset, add a record in the table below before merging. Prefer original artwork or independently generated assets.
+| Asset | Source | Usage |
+| --- | --- | --- |
+| Colored block tiles | Code-drawn geometric squares in `game_screen.dart` | Original UI |
+| Background gradient and card surfaces | Code-drawn Flutter widgets in `game_screen.dart` | Original UI |
+| Icons | Built-in Flutter Material icon font | Flutter dependency |
 
-| Path | Type | Creator / generation tool and version | Creation date | Source / prompt or process | License / terms checked | Reviewer |
-| --- | --- | --- | --- | --- | --- | --- |
-
-Generated content must still be checked for recognizable third-party characters, brands, images or recordings. Do not assume any generator grants unrestricted commercial usage.
+Any future asset must record author/generator, creation date, model/tool,
+prompt/process summary, usage rights, and reviewer before integration.
