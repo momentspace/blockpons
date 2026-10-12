@@ -1,11 +1,11 @@
 # Contributor / coding-agent instructions
 
-- まず README.md、docs/PRODUCT.md、関連 Issue、docs/adr/ を読むこと。
-- Issue の受入条件を基準に、1つの変更を小さなPRにまとめること。
-- 盤面や得点の計算は UI と分離し、純粋な Dart で決定的にテスト可能にすること。
-- 乱数は注入可能にし、再現性のあるテストを作ること。
-- ゲーム進行が破綻する境界条件（同時行列消去、置けないピース、再挑戦）をテストすること。
-- Web・Android・iOS の互換性を損ねる依存追加前に ADR を検討すること。
-- 著作権で保護された第三者のアセットやコードを無断で使わないこと。
-- CI の失敗を無視しない。未実施の実機検証は実施済みと書かないこと。
-- 自動マージ・リリース・課金設定・認証情報のコミットは明示許可なしに行わないこと。
+- Read README.md, docs/PRODUCT.md, docs/SECURITY_AND_ASSETS.md, related Issues and docs/adr/ first.
+- This repository is **public**. Never commit secrets, API tokens, credentials, signing keys, personal data, private infrastructure values, .env files or machine-local files. Check staged changes and generated files before commits.
+- Prefer self-authored or generated visuals, icons, sound and music; **never reuse external game assets without explicit permission**. Keep provenance and licensing documentation for every asset.
+- Keep work in small PRs aligned to acceptance criteria.
+- Isolate board/scoring calculations from Flutter UI; make pure Dart logic deterministic and unit tested.
+- Inject RNG for reproducible tests. Cover simultaneous row/column clears, no-placement state, retry, and invalid placement.
+- Evaluate ADR before dependencies that may break Web/Android/iOS parity.
+- Do not suppress CI failures; never report unperformed device tests as complete.
+- Do not auto-merge, publish releases, configure payments, or commit credentials without explicit authorization.
